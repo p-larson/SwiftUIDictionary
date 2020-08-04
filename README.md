@@ -21,7 +21,7 @@ struct ContentView: View {
 }
 ```
 ## Installation
-1. Add `SwiftUIDictionary` to SPM
+1. Add `SwiftUIDictionary` to SPM (https://github.com/p-larson/SwiftUIDictionary)
 2. Import `SwiftUIDictionary`
 3. Define your text (`String`) and Definitions (`[Definition]`)
 4. Create your `DictionaryView`
