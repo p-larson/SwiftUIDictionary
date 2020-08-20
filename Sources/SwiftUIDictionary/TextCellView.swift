@@ -40,7 +40,7 @@ internal struct TextCellView: View {
             .background(height($height))
             .overlay(overlay)
             .onTapGesture {
-                withAnimation(Animation.spring().speed(0.25)) {
+                withAnimation(Animation.spring().speed(2.0)) {
                     self.isShowing.toggle()
                 }
             }
