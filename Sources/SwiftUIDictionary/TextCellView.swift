@@ -18,6 +18,7 @@ internal struct TextCellView: View {
     // Initializer
     public init(component: WordComponent) {
         self.component = component
+        
     }
     // Overlay
     var overlay: some View {
@@ -27,7 +28,7 @@ internal struct TextCellView: View {
             .offset(y: -subHeight / 2)
             .padding(.bottom, height)
             .opacity(isShowing ? 1 : 0)
-            .frame(width: UIScreen.main.bounds.width / 2)
+//            .frame(width: UIScreen.main.bounds.width / 2)
             .frame(maxHeight: .infinity)
             .fixedSize()
     }
@@ -35,10 +36,11 @@ internal struct TextCellView: View {
     public var body: some View {
         Text(component.base)
             .underline(component.definition != nil, color: Color.black)
+            .fixedSize()
             .background(height($height))
             .overlay(overlay)
             .onTapGesture {
-                withAnimation(.spring()) {
+                withAnimation(Animation.spring().speed(0.25)) {
                     self.isShowing.toggle()
                 }
             }

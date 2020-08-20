@@ -47,7 +47,7 @@ public struct DictionaryView: View {
         return ZStack(alignment: .topLeading) {
             ForEach(map) { component in
                 TextCellView(component: component)
-                    .padding(.horizontal, 3)
+                    .padding(.horizontal, 1.2)
                     .alignmentGuide(.leading, computeValue: { context in
                         
                         if (abs(width - context.width) > proxy.size.width) {
